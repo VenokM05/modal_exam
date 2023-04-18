@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="modal.css" type="text/css" />
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    <title>Modal</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Your Subscriptions</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>Subscription</th>
+                    <th>Next Rebill</th>
+                    <th>Action</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>$49.99 per month</td>
+                    <td>December 13, 2020</td>
+                    <td><button id="cancelBtn">
+						<span id="Btn1">
+							Cancel
+						</span>
+						<span style="display:none;" id="Btn2">
+							Cancelled
+						</span>
+					</button></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <!-- Subscription Modal -->
+    <div class="modal fade" id="mySubcription" role="dialog">
+        <div class="modal-dialog">
+            <!-- Modal content-->
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title">Cancel Subscription</h4>
+                </div>
+                <div class="modal-body">
+                    <p id="cancelMessage">Are you sure you want to cancel your subscription?</p>
+                    <p id="successMessage" style="display:none;">
+                        Subscription successfully cancelled!
+                    </p>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal" id="noBtn">No</button>
+
+                    <button type="button" class="btn btn-default" id="yesBtn">Yes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Success Modal -->
+    <footer>
+        <script type="text/javascript" src="modal.js"></script>
+    </footer>
+</body>
+
+</html>
